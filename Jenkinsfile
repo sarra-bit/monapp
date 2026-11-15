@@ -15,8 +15,7 @@ pipeline {
     stage('Docker Build') {
       steps {
         bat 'docker version'
-        bat "docker build -t %IMAGE%:%TAG% ."
-      }
+      --load bat "docker build --load -t %IMAGE%:%TAG% ."      }
     }
 
     stage('Smoke Test') {
