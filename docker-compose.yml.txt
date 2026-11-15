@@ -1,0 +1,8 @@
+@"
+services:
+  web:
+    image: sarrahajjar/monapp:latest
+    ports:
+      - "8082:80"
+    restart: unless-stopped
+"@ | Set-Content -Encoding ascii docker-compose.yml
